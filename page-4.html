@@ -1,0 +1,224 @@
+<!-- HTML Document with Bootstrap Styles for a Payment Form -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Title of the Document -->
+    <title>Payment Form</title>
+</head>
+
+<!-- CSS Styling -->
+<style>
+    /* Styling for Images */
+    img {
+        width: 10%;
+    }
+    /* Styling for top border and padding */
+    .container-fluid .mt-2 {
+        border-bottom: 3px solid rgb(197, 189, 189);
+        padding-bottom: 10px;
+    }
+    /* Styling for top border and padding */
+    .container-fluid .c1 {
+        border-top: 1px solid rgb(192, 188, 188);
+        padding-top: 10px;
+    }
+    /* Styling for top border */
+    .container-fluid .d-grid {
+        border-top: 2px solid rgb(194, 189, 189);
+    }
+</style>
+
+<!-- Body Section -->
+<body>
+    <!-- Payment Form Container -->
+    <div class="container-fluid d-flex align-items-center flex-column text-center mt-4">
+        <!-- Bootstrap Icon Image -->
+        <img src="bootstrap_icon_195906.ico" alt="bootstrap">
+        <!-- Heading for the Payment Form -->
+        <h1>Payment Form</h1>
+        <!-- Placeholder Text -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi, molestias corporis praesentium...</p>
+    </div>
+
+    <!-- Address and Payment Information Section -->
+    <div class="container-fluid mt-3">
+        <!-- Address Form Section -->
+        <div class="row">
+            <div class="col-8">
+                <!-- Heading for Billing Address -->
+                <h2>Billing Address</h2>
+                <!-- Billing Address Form -->
+                <form class="mb-4 mt-3">
+                    <!-- First and Last Name Inputs -->
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label" for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName">
+                        </div>
+                        <div class="col">
+                            <label class="form-label" for="lastName">Last Name</label>
+                            <input type="text" id="lastName" class="form-control">
+                        </div>
+                    </div>
+                    <!-- Username, Email, Address Inputs -->
+                    <div class="mt-3">
+                        <label class="form-label" for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Username">
+                    </div>
+                    <div class="mt-3">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    </div>
+                    <div class="mt-3">
+                        <label class="form-label" for="address">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="1234 Main Street">
+                    </div>
+                    <div class="mt-3">
+                        <label class="form-label" for="address2">Address 2 (optional)</label>
+                        <input type="text" class="form-control" id="address2" placeholder="Apartment, suite, etc.">
+                    </div>
+                    <!-- Country, State, Zip Code Inputs -->
+                    <div class="row">
+                        <div class="col mt-3">
+                            <label for="country" class="form-label">Country</label>
+                            <select id="country" class="form-select" name="countryList">
+                                <option selected="selected">Choose...</option>
+                                <option>Italy</option>
+                                <option>Greece</option>
+                                <option>Spain</option>
+                                <option>Australia</option>
+                                <option>Japan</option>
+                                <option>New Zealand</option>
+                            </select>
+                        </div>
+                        <div class="col mt-3">
+                            <label for="state" class="form-label">State</label>
+                            <select id="state" class="form-select" name="stateList">
+                                <option selected="selected">Choose...</option>
+                                <option>Single</option>
+                                <option>In a relationship</option>
+                                <option>Married</option>
+                            </select>
+                        </div>
+                        <div class="col mt-3">
+                            <label for="zip" class="form-label">Zip Code</label>
+                            <input type="text" name="zip" id="zip" class="form-control">
+                        </div>
+                    </div>
+                    <!-- Checkboxes for Address Options -->
+                    <div class="form-check mt-3 c1">
+                        <input type="checkbox" name="check" id="check1" class="form-check-input">
+                        <label for="check1" class="form-check-label">Shipping address is the same as my billing address</label>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input type="checkbox" name="check" id="check2" class="form-check-input">
+                        <label for="check2" class="form-check-label">Save this information for next time</label>
+                    </div>
+                    <!-- Radio Buttons for Payment Method -->
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" id="radio1" name="paymentOption" value="credit" checked>
+                        <label class="form-check-label" for="radio1">Credit Card</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="radio2" name="paymentOption" value="debit">
+                        <label class="form-check-label" for="radio2">Debit Card</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="radio3" name="paymentOption" value="paypal">
+                        <label class="form-check-label" for="radio3">PayPal</label>
+                    </div>
+                    <!-- Credit Card Information Inputs -->
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label for="cardName" class="form-label">Name on Card</label>
+                            <input type="text" name="cardname" id="cardName" class="form-control">
+                            <label for="cardName" class="form-label"><small>Full name as displayed on the card</small></label>
+                        </div>
+                        <div class="col">
+                            <label for="cardNumber" class="form-label">Credit Card Number</label>
+                            <input type="text" name="cardnum" id="cardNumber" class="form-control">
+                        </div>
+                    </div>
+                    <!-- Credit Card Expiry Date and CVV Inputs -->
+                    <div class="row mt-3 mb-3">
+                        <div class="col-3">
+                            <label for="cardExpiry" class="form-label">Expiration Date</label>
+                            <input type="text" name="cardex" id="cardExpiry" class="form-control" maxlength="16">
+                        </div>
+                        <div class="col-3">
+                            <label for="cardCVV" class="form-label">CVV</label>
+                            <input type="text" name="cvv" id="cardCVV" class="form-control" maxlength="3">
+                        </div>
+                    </div>
+                    <!-- Continue to Payment Button -->
+                    <div class="d-grid gap-3 mt-3 pt-3">
+                        <button type="button" class="btn btn-primary">Continue to Payment</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Cart Summary Section -->
+            <div class="col-4">
+                <!-- Cart Summary Heading -->
+                <div class="d-flex justify-content-between">
+                    <h4 class="text-primary">Your Cart</h4>
+                    <!-- Cart Item Count Badge -->
+                    <div class="bg-primary text-white text-center d-flex justify-content-center align-items-center mt-1 rounded-circle" style="height: 20px; width: 20px;"><small>3</small></div>
+                </div>
+                <!-- Cart Summary Table -->
+                <table class="table border-top border-end border-start table-striped">
+                    <tr>
+                        <!-- Product Name and Description -->
+                        <td>Product Name
+                            <br>
+                        <small>Brief description</small></td>
+                        <!-- Product Price -->
+                        <td class="text-end">12$</td>
+                    </tr>
+                    <tr>
+                        <td>Second Product
+                            <br>
+                            <small>Brief description</small>
+                        </td>
+                        <td class="text-end">8$</td>
+                    </tr>
+                    <tr>
+                        <td>Third Product
+                            <br>
+                            <small>Brief description</small></td>
+                        <td class="text-end">5$</td>
+                    </tr>
+                    <tr>
+                        <!-- Discount Code Row -->
+                        <td class="text-success">Promo Code <br> EXAMPLECODE</td>
+                        <!-- Discount Amount -->
+                        <td class="text-end text-success">-5$</td>
+                    </tr>
+                    <tr>
+                        <!-- Total Amount Row -->
+                        <td>Total (USD)</td>
+                        <!-- Total Amount -->
+                        <td class="text-end"><b>20$</b></td>
+                    </tr>
+                </table>
+                <!-- Promo Code Entry Section -->
+                <div class="container-fluid border rounded">
+                    <div class="container-fluid d-flex p-1">
+                        <!-- Promo Code Input -->
+                        <input type="text" class="form-control" placeholder="Promo Code" style="max-width: 200px;">
+                        <!-- Apply Promo Code Button -->
+                        <button type="button" class="btn btn-secondary">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
